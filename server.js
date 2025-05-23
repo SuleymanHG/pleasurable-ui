@@ -100,6 +100,19 @@ app.get('/story-settings', async function (request, response) {
   response.render('storysettings.liquid')
 })
 
+app.get('/all-stories', async function (request, response) {
+
+  const language = await fetch('https://fdnd-agency.directus.app/items/tm_language');
+  const stories = await fetch('https://fdnd-agency.directus.app/items/tm_story?fields=*,audio.audio_file,audio.transcript');
+  
+  const languageJSON = await language.json();
+  const storiesJSON = await stories.json();
+
+ 
+  // Zie https://expressjs.com/en/5x/api.html#res.render over response.render()
+  response.render('all-stories.liquid', { language: languageJSON.data, stories: storiesJSON.data })
+})
+
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
 app.set('port', process.env.PORT || 8000)

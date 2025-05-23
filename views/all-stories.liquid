@@ -1,0 +1,69 @@
+{% render 'partials/header.liquid' %}
+
+<style>
+    body {
+        background: linear-gradient(#471871,#142151);
+    }
+</style>
+
+<section class="header-all-stories">
+    <a href="/">
+        <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3398 0.555078C14.0797 1.29502 14.0797 2.4947 13.3398 3.23464L4.5743 12.0001L13.3398 20.7656C14.0797 21.5055 14.0797 22.7052 13.3398 23.4452C12.5998 24.1851 11.4002 24.1851 10.6602 23.4452L0.554955 13.3399C-0.184985 12.6 -0.184985 11.4003 0.554955 10.6603L10.6602 0.555078C11.4002 -0.184863 12.5998 -0.184863 13.3398 0.555078Z" fill="white"/>
+        </svg>
+    </a>
+    <h1>All stories</h1>
+</section>
+
+<section class="nav-all-stories">
+    <form action="/search">
+        <label for="search">
+            <button type="submit">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.33335 14C3.65145 14 0.666687 11.0152 0.666687 7.33329C0.666687 3.65139 3.65145 0.666626 7.33335 0.666626C11.0153 0.666626 14 3.65139 14 7.33329C14 8.87391 13.4774 10.2925 12.5999 11.4214L17.0892 15.9108L15.9107 17.0893L11.4213 12.5999C10.2924 13.4774 8.87392 14 7.33335 14ZM12.3333 7.33333C12.3333 10.0948 10.0948 12.3333 7.33333 12.3333C4.57191 12.3333 2.33333 10.0948 2.33333 7.33333C2.33333 4.57191 4.57191 2.33333 7.33333 2.33333C10.0948 2.33333 12.3333 4.57191 12.3333 7.33333Z" fill="#9264F4"/>
+                </svg>
+            </button>
+            <input type="text" placeholder="Search for stories">
+        </label>
+    </form>
+</section>
+
+<div class="filter-knoppen">
+    <button class="filter-button">Animal
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.43342 4.90208C7.21143 5.12406 6.85153 5.12406 6.62955 4.90208L3.9999 2.27244L1.37026 4.90208C1.14828 5.12406 0.788371 5.12406 0.566389 4.90208C0.344407 4.6801 0.344407 4.32019 0.566389 4.09821L3.59797 1.06663C3.81995 0.844651 4.17986 0.844651 4.40184 1.06663L7.43342 4.09821C7.6554 4.32019 7.6554 4.6801 7.43342 4.90208Z" fill="white"/>
+        </svg>
+    </button>
+    <button class="filter-button">Season
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.43342 4.90208C7.21143 5.12406 6.85153 5.12406 6.62955 4.90208L3.9999 2.27244L1.37026 4.90208C1.14828 5.12406 0.788371 5.12406 0.566389 4.90208C0.344407 4.6801 0.344407 4.32019 0.566389 4.09821L3.59797 1.06663C3.81995 0.844651 4.17986 0.844651 4.40184 1.06663L7.43342 4.09821C7.6554 4.32019 7.6554 4.6801 7.43342 4.90208Z" fill="white"/>
+        </svg>
+    </button>
+    <button class="filter-button">Language
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.43342 4.90208C7.21143 5.12406 6.85153 5.12406 6.62955 4.90208L3.9999 2.27244L1.37026 4.90208C1.14828 5.12406 0.788371 5.12406 0.566389 4.90208C0.344407 4.6801 0.344407 4.32019 0.566389 4.09821L3.59797 1.06663C3.81995 0.844651 4.17986 0.844651 4.40184 1.06663L7.43342 4.09821C7.6554 4.32019 7.6554 4.6801 7.43342 4.90208Z" fill="white"/>
+        </svg>
+    </button>
+    <button class="filter-button">Sorting
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.43342 4.90208C7.21143 5.12406 6.85153 5.12406 6.62955 4.90208L3.9999 2.27244L1.37026 4.90208C1.14828 5.12406 0.788371 5.12406 0.566389 4.90208C0.344407 4.6801 0.344407 4.32019 0.566389 4.09821L3.59797 1.06663C3.81995 0.844651 4.17986 0.844651 4.40184 1.06663L7.43342 4.09821C7.6554 4.32019 7.6554 4.6801 7.43342 4.90208Z" fill="white"/>
+        </svg>
+    </button>
+</div>
+
+<ul class="ul-all-stories">
+    {% for story in stories %}
+       <li class="story">
+        <img src="https://fdnd-agency.directus.app/assets/{{ story.image }}" alt="{{ story.title }}" loading="lazy">
+        <article>
+            <h3>{{ story.title }}</h3>
+            <p>{{ story.summary }}</p>
+            <a class="play-button-stories" href="/story/{{ story.id }}"><svg class="play-button" width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0874 7.06141C10.7817 6.52417 10.7817 5.47595 10.0874 4.93871C7.98914 3.31514 5.6461 2.03543 3.14602 1.14749L2.68929 0.985277C1.8155 0.674939 0.892544 1.26613 0.774251 2.16812C0.443739 4.68826 0.443739 7.31186 0.774251 9.83201C0.892543 10.734 1.8155 11.3252 2.68929 11.0148L3.14602 10.8526C5.6461 9.96469 7.98914 8.68498 10.0874 7.06141Z" fill="white"/></svg></a>
+            <p>{{ story.playtime }}</p>
+        </article>
+        <img src="EN.png" alt="English" loading="lazy">
+       </li>
+    {% endfor %}
+    </ul>
+
+{% render 'partials/footer.liquid' %}
