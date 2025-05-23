@@ -1,0 +1,122 @@
+.tekst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 150px 31px;
+    grid-template-rows:  1fr;
+    justify-items: center;
+    transform: translate(-50%, -50%);
+    height: 90px;
+    width: 181px;
+    border-radius: 9.93px;
+    background-color: white;
+
+    animation: grow-in 2.5s ease-out forwards;
+    @starting-style {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 8px;
+        margin-top: 3px;
+        margin-left: 3px;
+    }
+
+    .cross {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 16px;
+        height: 16px;
+        background: none;
+        margin-top: 10px;
+        margin-right: 10px;
+
+        span {
+            position: relative;
+            background-color: black;
+            width: 16px;
+            height: 4px;
+            transform-origin: right;
+            border-radius: 8px;
+        }
+        span:nth-of-type(1){
+            rotate: -45deg;
+        }
+        span:nth-of-type(2) {
+            rotate: 45deg;
+        }
+    }
+
+    .purple-button {
+        background-color: #954BE2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 165px;
+        height: 26px;
+        grid-column: span 2;
+        border-radius: 8px;
+        color: white;
+    }
+
+    svg {
+        width: 47.89px;
+        height: 48.42px;
+        border-radius: 16px;
+        position: relative;
+        bottom: 20px;
+        left: 74px;
+        z-index: -1;
+    }
+}
+
+@keyframes grow-in {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* loading-button */
+.loading-button {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .icon {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+
+  /* Spinner animatie */
+  &[data-state="loading"] .icon {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
