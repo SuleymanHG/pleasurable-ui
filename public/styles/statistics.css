@@ -191,9 +191,27 @@
                 background-color: #0B8FAC;
                 padding: 4px 8px 4px 8px;
                 border-radius: 8px;
+                view-timeline-name: --fadein;
+                view-timeline-axis: block;
+                animation-name: fadeInOnScroll;
+                animation-fill-mode: both;
+                animation-timeline: --fadein;
+                animation-range: entry 0% cover 30%; 
+                opacity: 0;
             }
         }
     }
+}
+
+@keyframes fadeInOnScroll {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .roadmap {
