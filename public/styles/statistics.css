@@ -183,7 +183,7 @@
 
 
             p {
-                font-size: 14px;
+                font-size: clamp(14px, 1.5vw, 16px);
                 font-weight: 400;
             }
 
@@ -198,6 +198,7 @@
                 animation-timeline: --fadein;
                 animation-range: entry 0% cover 30%; 
                 opacity: 0;
+                font-size: clamp(16px, 1.5vw, 18px);
             }
         }
     }
