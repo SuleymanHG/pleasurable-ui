@@ -38,7 +38,8 @@ De navigatie bestaat uit drie delen:
 ## Pagina's
 
 ### Statisctics
-
+De statistics pagina is een pagina waar je alle statestieken van je voortgang kunt bekijken. Ook kan je jezelf vergelijken met hoe andere kinderen het doen door te klikken op de knop onder de grafiek. Hierna veranderd de grafiek naar de voortgang van andere kinderen.
+![Schermafbeelding 2025-05-27 104845](https://github.com/user-attachments/assets/2316a30a-a986-457c-a61c-ff863b10671b)
 
 ### Lessons
 
