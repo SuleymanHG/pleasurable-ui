@@ -102,9 +102,22 @@
         font-size: 14px;
     }
 
-    img {
-        width: 358px;
-        height: 200px;
+    svg {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        font-size: 12px;
+        background-color: #155A62;
+        border-radius: 8px;
+    
+        text {
+          fill: white;
+        }
+    
+        circle {
+          stroke: #70CFAD;
+          stroke-width: 2;
+        }
     }
 
     ul {
