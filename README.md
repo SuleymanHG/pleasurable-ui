@@ -1,3 +1,4 @@
+# Tumi Mundo
 # Pleasurable User Interface
 
 Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruikers blij van worden.
@@ -7,7 +8,6 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasur
 
 
 ## Inhoudsopgave
-
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
@@ -20,8 +20,35 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasur
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-## Gebruik
+## Uitleg
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+
+### Homepage
+
+### Navigatie
+
+### Navigatie interactie
+
+## Pagina's
+
+### Statisctics
+
+### Lessons
+
+### Profile
+
+### Testing
+
+## Data
+
+### Serverside
+
+### Clientside
+
+## Projectboard
+
+### Samenwerking
+
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
