@@ -136,6 +136,11 @@ app.get('/all-stories', async function (request, response) {
   response.render('all-stories.liquid', { language: languageJSON.data, stories: storiesJSON.data })
 })
 
+// MARK: tekstwolkje
+app.get('/tekstwolkje', async function (request, response) {
+  response.render('tekstwolkje.liquid')
+})
+
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
 app.set('port', process.env.PORT || 8000)
