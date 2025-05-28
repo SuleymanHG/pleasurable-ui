@@ -38,6 +38,13 @@ De navigatie bestaat uit drie delen:
 ## Pagina's
 
 ### Statisctics
+De statistics pagina is een pagina waar je alle statestieken van je voortgang kunt bekijken. Ook kan je jezelf vergelijken met hoe andere kinderen het doen door te klikken op de knop onder de grafiek. Hierna veranderd de grafiek naar de voortgang van andere kinderen.
+
+![Schermafbeelding 2025-05-27 104845](https://github.com/user-attachments/assets/2316a30a-a986-457c-a61c-ff863b10671b)
+
+Area chart van de statistics pagina:
+
+![Schermafbeelding 2025-05-27 202127](https://github.com/user-attachments/assets/3fe5073a-4786-4e40-8d0f-60905a7ac284)
 
 
 ### Lessons
@@ -64,6 +71,16 @@ De samenwerking in dit project is tot nu toe een pleasante geweest, maar niet zo
 
 
 ## Kenmerken
+HTML structuur: 
+- We hebben gebruik gemaakt van semantische HTML.
+
+CSS:
+- We hebben onze website responsive gemaakt d.m.v. Mediaqueries toe te passen.
+- We hebben daarnaast ook onze css genest en duidelijke witruimte en structuur toegepast.
+
+JS: 
+- We hebben interactiviteit gecreëerd door middel van JS.
+- We hebben een pleasurable laag gemaakt boven op onze progressive enhanced buttons en formulieren.
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
 ## Installatie

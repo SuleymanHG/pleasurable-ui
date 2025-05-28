@@ -85,7 +85,18 @@ app.get('/', async function (request, response) {
 
 // MARK: Lessons
 app.get('/lessons', async function (request, response) {
-  response.render('lessons.liquid')
+
+    const storyResponse = await fetch(`${api}${api_story}`)  
+    const playlistResponse = await fetch(`${api}${api_playlist}`)
+
+    const storyResponseJSON = await storyResponse.json()
+    const playlistResponseJSON = await playlistResponse.json()
+
+    
+     response.render('lessons.liquid', 
+    {stories: storyResponseJSON.data,
+     playlists: playlistResponseJSON.data
+    })
 })
 
 //MARK: Profilepage
@@ -123,6 +134,11 @@ app.get('/all-stories', async function (request, response) {
  
   // Zie https://expressjs.com/en/5x/api.html#res.render over response.render()
   response.render('all-stories.liquid', { language: languageJSON.data, stories: storiesJSON.data })
+})
+
+// MARK: tekstwolkje
+app.get('/tekstwolkje', async function (request, response) {
+  response.render('tekstwolkje.liquid')
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren

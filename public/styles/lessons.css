@@ -1,0 +1,49 @@
+#stories label {
+            display:inline-flex;
+            align-items:center;
+            gap:.25em;
+            cursor:pointer;
+            height: 4em;
+            width: 4em;
+        }
+        
+        #stories input {
+            appearance:none;
+            width:5em;
+            height:2.5em;
+            background-color:grey;
+            border-radius:1.6em;
+            cursor:pointer;
+            display: flex;
+            align-items: center;
+            padding: 0 0.2em; 
+            box-sizing: border-box;
+        }
+        
+        #stories input::after {	
+            content:"";
+            display:block;
+            width:2em;
+            height:2em;
+            border-radius:inherit;
+            transition:.3s;
+        }
+        
+        #stories input:checked::after {
+            translate:2em;
+            font-size: 1em;
+            font-weight: bold;
+            
+            align-content: center;
+        }
+        
+        #stories input:checked{
+            background-color: rgb(114 222 195);
+        }
+
+.verhalen{
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    display: flex;
+    height: 6.25em;
+}
