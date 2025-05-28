@@ -1,0 +1,101 @@
+.storysettings{
+
+
+    
+        *{
+            margin: 0;
+        }
+
+        p{
+            color: var(--main-light-text-color);
+            font-weight: 500;
+            margin: 10px 0 5px 0;
+        }
+
+        h1{
+            margin: 0 auto;
+        }
+
+        .heading-story-settings{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+
+                    
+        }
+
+        .voice-preview-section{
+
+            .titel-preview-section{
+                display: flex;
+                align-items: center;
+
+                svg{
+                    margin-left: auto;
+                }
+
+            }
+
+            ul{
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                grid-auto-flow: column;
+                padding:0;
+                
+                gap: 0;
+                overflow-x: auto;
+                gap: 10px;
+                
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: white;
+                    width: 84px;
+                    height: 84px;
+                    border-radius: 4px;
+
+                    
+                    p{
+                        color: var(--main-dark-text-color);
+                        margin: 3px 0 0 0;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                }
+            }
+            
+            .buttons-previews{
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+                gap: 10px;
+
+                button{
+                background-color: var(--button-color-three);
+                padding: 6.6665px 19px;
+                border-radius: 8px;
+                
+
+                &:hover{
+                    background-color: var(--hover-button-color-three);
+                }
+            }
+        }
+
+    }
+        
+}
+
+.pick-background-section{
+
+    div{
+        display: flex;
+        overflow-x: auto;
+        margin-left: -9px;
+    }
+    button{
+        background-color: transparent;
+    }
+}

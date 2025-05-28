@@ -1,60 +1,38 @@
-<section>
+{% render 'partials/header.liquid' %}
+<style>
+    body{
+        background: var(--story-nightmode);
+        height: 100vh;
+        background-size:cover;
+        margin: 20px;
+    }
+</style>
+
+<main class="storysettings">
+    <section class="heading-story-settings">
         <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3398 0.555038C14.0797 1.29498 14.0797 2.49466 13.3398 3.2346L4.5743 12.0001L13.3398 20.7656C14.0797 21.5055 14.0797 22.7052 13.3398 23.4451C12.5998 24.1851 11.4002 24.1851 10.6602 23.4451L0.554955 13.3399C-0.184985 12.5999 -0.184985 11.4002 0.554955 10.6603L10.6602 0.555038C11.4002 -0.184903 12.5998 -0.184903 13.3398 0.555038Z" fill="white"/>
         </svg>
 
         <h1>Story settings</h1>
-    </div>
-</section>
+    </section>
 
-<section>
-    <div>
-        <h2>Story settings</h2>
-        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.86739 14.6591C10.2126 14.6591 10.4924 14.3793 10.4924 14.0341V9.03409C10.4924 8.68891 10.2126 8.40909 9.86739 8.40909C9.52221 8.40909 9.24239 8.68891 9.24239 9.03409V14.0341C9.24239 14.3793 9.52221 14.6591 9.86739 14.6591Z" fill="white"/>
-            <path d="M9.86739 5.70075C10.3276 5.70075 10.7007 6.07385 10.7007 6.53409C10.7007 6.99433 10.3276 7.36742 9.86739 7.36742C9.40715 7.36742 9.03406 6.99433 9.03406 6.53409C9.03406 6.07385 9.40715 5.70075 9.86739 5.70075Z" fill="white"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.909058 9.86742C0.909058 4.91987 4.91984 0.909088 9.86739 0.909088C14.8149 0.909088 18.8257 4.91987 18.8257 9.86742C18.8257 14.815 14.8149 18.8258 9.86739 18.8258C4.91984 18.8258 0.909058 14.815 0.909058 9.86742ZM9.86739 2.15909C5.6102 2.15909 2.15906 5.61023 2.15906 9.86742C2.15906 14.1246 5.6102 17.5758 9.86739 17.5758C14.1246 17.5758 17.5757 14.1246 17.5757 9.86742C17.5757 5.61023 14.1246 2.15909 9.86739 2.15909Z" fill="white"/>
-        </svg>
-    </div>
+    {% render 'partials/voice-preview.liquid' %}
 
-    <p>Hold down the button to hear a preview of the voices</p>
+    {% render 'partials/pick-background.liquid' %}
 
-    <div>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    <div>
-        <button></button>
-        <button></button>
-    </div>
-</section>
+    <section>
+        <h2>Volume</h2>
+    </section>
 
-<section>
-    <h2>Pick a background</h2>
-    <p>Pick a background during the story</p>
+    <section>
+        <h2>Sleep mode</h2>
+        <p>The story will automatically stop and the app will close after the chosen time.</p>
+    </section>
 
-    <div>
-        <button></button>
-        <button></button>
-        <button></button>
-    </div>
-</section>
+    <button>Continue</button>
 
-<section>
-    <h2>Volume</h2>
-</section>
+</main>
 
-<section>
-    <h2>Sleep mode</h2>
-    <p>The story will automatically stop and the app will close after the chosen time.</p>
-</section>
 
-<button>Continue</button>
+{% render 'partials/footer.liquid' %}

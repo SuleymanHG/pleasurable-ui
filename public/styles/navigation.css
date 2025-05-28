@@ -13,15 +13,13 @@ nav {
     z-index: 2;
 
     button {
-        width: 32px;
-        height: 32px;
         background: none;
         border: none;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5.5px;
+        gap: 4.81px;
         
 
         span {
@@ -81,6 +79,7 @@ header {
 
             p {
                 font-size: 17px;
+                color: white;
             }
         }
 

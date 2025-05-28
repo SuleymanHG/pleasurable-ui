@@ -15,6 +15,7 @@ const api_buddy = "buddy"
 const api_lang = "language"
 const api_audio = "audio"
 const api_playlist = "playlist"
+const api_speaker_profile = "preview"
 const api_story = "story"
 const api_animal = "animal"
 const api_season = "season"
@@ -30,6 +31,7 @@ const buddyResponse = await fetch(`${api}${api_buddy}`)
 const languageResponse = await fetch(`${api}${api_lang}`)
 const audioResponse = await fetch(`${api}${api_audio}`)
 const playlistResponse = await fetch(`${api}${api_playlist}`)
+const previewResponse = await fetch (`${api}${api_speaker_profile}`)
 const storyResponse = await fetch(`${api}${api_story}`)
 const animalReponse = await fetch(`${api}${api_animal}`)
 const seasonResponse = await fetch(`${api}${api_season}`)
@@ -46,6 +48,7 @@ const buddyResponseJSON = await buddyResponse.json()
 const languageResponseJSON = await languageResponse.json()
 const audioResponseJSON = await audioResponse.json()
 const playlistResponseJSON = await playlistResponse.json()
+const previewResponseJSON = await previewResponse.json()
 const storyResponseJSON = await storyResponse.json()
 const animalReponseJSON = await animalReponse.json()
 const seasonResponseJSON = await seasonResponse.json()
@@ -97,7 +100,29 @@ app.get('/statistics', async function (request, response) {
 
 // MARK: Story settings
 app.get('/story-settings', async function (request, response) {
-  response.render('storysettings.liquid')
+  const previewResponse = await fetch (`${api}${api_speaker_profile}`)
+
+  const previewResponseJSON = await previewResponse.json()
+
+  
+  
+  response.render('storysettings.liquid', {
+    preview: previewResponseJSON.data
+
+  })
+})
+
+app.get('/all-stories', async function (request, response) {
+
+  const language = await fetch('https://fdnd-agency.directus.app/items/tm_language');
+  const stories = await fetch('https://fdnd-agency.directus.app/items/tm_story?fields=*,audio.audio_file,audio.transcript');
+  
+  const languageJSON = await language.json();
+  const storiesJSON = await stories.json();
+
+ 
+  // Zie https://expressjs.com/en/5x/api.html#res.render over response.render()
+  response.render('all-stories.liquid', { language: languageJSON.data, stories: storiesJSON.data })
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren

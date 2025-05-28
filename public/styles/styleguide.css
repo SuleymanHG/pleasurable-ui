@@ -1,6 +1,6 @@
 :root {
     /* Kleuren */
-        --main-ligth-text-color:#ffffff;
+        --main-light-text-color:#ffffff;
         --main-dark-text-color:#000000;
     
     /* Home Background */
@@ -96,7 +96,6 @@
     body{
         background: var(--home-achtergrond);
         background-size: cover;  
-        
         font-family: var(--font-text), Arial, Helvetica, sans-serif;
     }
 
