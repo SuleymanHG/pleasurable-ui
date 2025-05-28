@@ -1,74 +1,40 @@
 {% render 'partials/header.liquid' %}
+<style>
+  :root {
+    padding: 0;
+    margin: 0;
+    background-color: #471871;
+  }
 
-<h1>Lessons</h1>
-
+  main {
+    background-color: #471871;
+  }
+</style>
 <main>
-  {% comment %} MARK: Eigen playlists en playlist maken {% endcomment %}
-  <section class="Own Playlists">
-    <h2>Own  Playlists</h2>
-    <ul>
-      {% comment %} Hier komt de for loop in de playlists {% endcomment %}
-      <li>
-        {% comment %} hier komt de playlist titel te staan via dynamische data {% endcomment %}
-        <p>Playlist Title</p>
+  <h1>Lessons</h1>
 
-        <picture>
-          <source>
-          <source>
-          <img>
-        </picture>
+  <section>
+    <div id="stories">
+      {% for story in stories %}
+        <ul>
+          <li class="verhalen">
+            <picture style="view-transition-name: morph-{{ story.image }}">
+              <source srcset="https://fdnd-agency.directus.app/assets//{{ story.image }}?format=avif" type="image/avif">
+              <source srcset="https://fdnd-agency.directus.app/assets//{{ story.image }}?format=webp" type="image/webp">
+              <img
+                src="https://fdnd-agency.directus.app/assets//{{ story.image }}"
+                height="100px"
+                width="100px">
+            </picture>
 
-        {% comment %} De anchor tag is de knop om af te spelen {% endcomment %}
-        <a></a>
-        {% comment %} de paragraaf tag is de afspeeltijd van de playlist {% endcomment %}
-        <p></p>
-      </li>
-    </ul>
-
-    <article>
-      <form action="/" method="post">
-        <a></a>
-        <h3>Make a playlist</h3>
-        <p>Add your favorite
- 
- 
- 
-                        stories in one playlist
-        </p>
-
-        <button type="submit"></button>
-      </form>
-    </article>
+            <p style="view-transition-name: morph-{{ story.id }}">{{ story.title }}</p>
+            <a href="/stories/{{ story.id }}">play story</a>
+          </li>
+        </ul>
+      {% endfor %}
+    </div>
   </section>
 
-  {% comment %} MARK: All stories {% endcomment %}
-  <section class="all_stories">
-    <h4>All Stories</h4>
-
-    <fieldset>
-        {% comment %} for loop voor elke taal die beschikbaar is op Tumo Mundo {% endcomment %}
-      <input type="radio">
-      {% comment %} de taal waar de verhalen in zijn gesproken door middel van dynamische data {% endcomment %}
-      <label>Country name</label>
-    </fieldset>
-
-    <a>Show all</a>
-    {% comment %} for loop voor elk verhaal bij de verhalen {% endcomment %}
-    <ul>
-      <li>
-        <picture>
-          <source>
-          <source>
-          <img>
-        </picture>
-
-        <p>Story title</p>
-        {% comment %} Link naar het verhaal {% endcomment %}
-        <a></a>
-      </li>
-    </ul>
-
-  </section>
 
   <section class="liked_playlists"></section>
 

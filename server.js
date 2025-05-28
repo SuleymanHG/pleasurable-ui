@@ -85,7 +85,18 @@ app.get('/', async function (request, response) {
 
 // MARK: Lessons
 app.get('/lessons', async function (request, response) {
-  response.render('lessons.liquid')
+
+    const storyResponse = await fetch(`${api}${api_story}`)  
+    const playlistResponse = await fetch(`${api}${api_playlist}`)
+
+    const storyResponseJSON = await storyResponse.json()
+    const playlistResponseJSON = await playlistResponse.json()
+
+    
+     response.render('lessons.liquid', 
+    {stories: storyResponseJSON.data,
+     playlists: playlistResponseJSON.data
+    })
 })
 
 //MARK: Profilepage
