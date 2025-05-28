@@ -1,0 +1,32 @@
+/* loading-button */
+.loading-button {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .icon {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+
+  /* Spinner animatie */
+  &[data-state="loading"] .icon {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
